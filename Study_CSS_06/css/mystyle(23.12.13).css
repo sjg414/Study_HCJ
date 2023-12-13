@@ -1,0 +1,19 @@
+/*23.12.13 quiz-1 외부스타일시트 css 만들기*/
+
+h1 {
+    display: inline-block; /*글자 부분에만 배경색이 채워지도록 지정*/
+    font-size:1.4em; /*글자크기*/
+    background-color:#222; /*배경색*/
+    color:#fff; /*글자색*/
+    padding:10px; /*여백*/
+}
+
+ul {
+    list-style:none; /*리스트 모양 안보이게*/
+}
+
+li {
+    font-size:1.2em; /*글자 크기*/
+    line-height:1.5; /*글자를 감싸고 있는 박스의 높이(font-size x line-height)*/
+    color:blue; /*글자색*/
+}
