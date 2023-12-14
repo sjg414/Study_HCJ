@@ -1,0 +1,56 @@
+<!--23.12.14 quiz-3
+1번 <table>태그에 포함된 border='1' 속성 삭제
+2.표와 셀에 테두리(1px solid black)를 그린 후 한 줄로 합쳐 표시
+3.표의 설명 글은 표 아래쪽에 표시
+4.각 셀에는 padding:10px 적용해 여백 두기
+5.배경색을 #eee로 지정하는 클래스 선택자 .heading을 정의한 후 첫 번째 행과 열에 적용-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>연습문제 3</title>
+  <style>
+    table {
+      border: 1px solid black; /*2번 문항*/
+      border-collapse: collapse; /*2번 문항*/
+      caption-side: bottom; /*3번 문항*/
+    }
+    th, td {
+      border: 1px solid black; /*2번 문항*/
+      padding: 10px; /*4번 문항*/
+    }
+    .heading {
+      background-color: #eee; /*5번 문항*/
+    }
+  </style>
+</head>
+<body>
+  <table> <!--1번 문항-->
+    <caption>2019 국민 독서실태</caption>
+    <thead class="heading">
+      <tr>
+        <th>구분</th>
+        <th>성인</th>
+        <th>독서자</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="heading">종이책</th>
+        <td>6.1권</td>
+        <td>11.8권</td>
+      </tr>
+      <tr>
+        <th class="heading">전자책</th>
+        <td>1.2권</td>
+        <td>7.1권</td>
+      </tr>
+      <tr>
+        <th class="heading">오디오북</th>
+        <td>0.2권</td>
+        <td>5.5권</td>
+      </tr>      
+    </tbody>
+  </table>
+</body>
+</html>
