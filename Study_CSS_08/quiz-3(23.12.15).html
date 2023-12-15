@@ -1,0 +1,42 @@
+﻿<!-- 23.12.15
+1.ul요소의 불릿 없애기
+2.목록의 각 항목인 li요소 왼쪽으로 플로팅
+3.a는 display none, 패딩 10px 20px, 배경색 #ccc -->
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>연습문제 3</title>
+		<style>
+			a:link, a:visited {
+				color:black;
+				text-decoration: none;
+			}
+			a:hover {
+				background-color:#000;
+				color:#fff;
+			}
+			ul {
+				list-style: none;
+			}
+			ul li {
+				float: left;
+			}
+			a {
+				display: block;
+				padding: 10px 20px;
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#">메뉴1</a></li>
+				<li><a href="#">메뉴2</a></li>
+				<li><a href="#">메뉴3</a></li>
+				<li><a href="#">메뉴4</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>
