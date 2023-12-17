@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color:#eee;
+  font-size:16px;
+}
+/* css 그리드 레이아웃으로 갤러ㅣ 만들기 */
+#wrapper {
+  display: grid; /*그리드 설정*/
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /*열 너비에 딱맞게*/
+  grid-gap: 1rem; /*그리드 간격*/
+}
+.card {
+  background-color:#fff;
+  box-shadow:0px 1px 5px #222;
+}
+.card > header {
+  font-size:1.5rem;
+  padding:0.5rem;
+}
+.card > p {
+  padding:0.5rem;
+  line-height:1.6em;
+}
+img {
+  max-width:100%;
+}
