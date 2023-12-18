@@ -1,0 +1,26 @@
+<!-- 23.12.18 입력 받은 두 수의 값이 같으면 곱하고, 다르면 더하기 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 1</title>
+</head>
+<body>
+	<script>
+		let str = prompt("두 수를 입력하세요[(ex)A,B]",""); //두 수 입력 받기
+
+		let nums =str.split(","); //문자 분리
+		sumMulti(parseInt(nums[0]), parseInt(nums[1])); //함수 실행, integer로 값 넘기기
+
+		function sumMulti(num1, num2) {
+			let result = 0;
+			if(num1 != num2)
+				result = num1 + num2;	
+			else
+				result = num1 * num2;
+			console.log(result);
+		}
+	</script>
+</body>
+</html>

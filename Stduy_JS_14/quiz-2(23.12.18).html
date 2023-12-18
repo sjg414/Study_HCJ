@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+	<style>
+		body {
+			font-size:1.2em;
+			text-align:center;
+		}
+		div {
+			color: red;
+			font-weight: bold;
+		}
+		span {
+			color: blue;
+			font-size: 1.7em;
+		}
+	</style>
+</head>
+<body>
+	<h2>3의 배수 찾기</h2>
+	<script>
+		var num = prompt("숫자를 입력하시오.", "");
+		var arr = [];
+		var i, count = 0;
+		if(num != null){ //값 입력 시
+			for(i = 1; i <= num; i++){ //3의 배수 일 시 배열에 추가
+			if(i % 3 == 0){
+				arr[count] = i;
+				count++;
+			}
+			else
+				continue;
+			}
+			
+			for(i = 0; i < count; i++){
+				document.write(arr[i] + ", ");
+			}
+
+			document.write("<div>");
+			document.write(num + "까지 <span>3의 배수</span>의 개수 : " + count);
+			document.write("</div>");
+		}
+		else //취소 버튼 시
+			document.write("값을 입력하세요!");
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 23.12.18 두 수를 입력받아 크기를 서로 비교하여 더 큰 숫자를 알림창에 표시 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+</head>
+<body>
+	<script>
+		let str = prompt("두 수를 입력하세요[(ex)A,B]",""); //두 수 입력 받기
+
+		let nums =str.split(","); //문자 분리
+		compareNum(parseInt(nums[0]), parseInt(nums[1])); //함수 실행, integer로 값 넘기기
+
+		function compareNum(num1, num2) {
+			if(num1 > num2)	//num1이 클 때
+				alert(num1 + "이(가) " + num2 + "보다 큽니다.");
+			else if(num2 > num1)	//num2가 클 때
+				alert(num2 + "이(가) " + num1 + "보다 큽니다.");
+			else	//같을 때
+				alert("두 수는 같습니다.");
+		}
+	</script>
+</body>
+</html>

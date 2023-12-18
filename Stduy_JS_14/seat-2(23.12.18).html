@@ -1,0 +1,52 @@
+<!-- 자리 배치도 만들기 2 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 배치도 만들기</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        var memberNum = prompt("입장객은 몇 명인가요?",""); //입장객 수
+        var memberCol = prompt("한 줄에 몇 명씩 앉습니까?",""); //한 줄의 수
+        var colNum = parseInt(memberNum / memberCol); //필요한 줄 수
+        var i, j, seatNum;
+
+        if(colNum == 0){    //나머지가 0일 경우(딱 떨어지는 경우)
+            
+        }
+        else{   //나머지가 0이 아닐 경우(딱 떨어지지 않는 경우)
+            colNum += 1;    //필요한 줄 수 +1
+        }
+
+        //자리 배치도 표로 작성
+        document.write("<table>")
+        for(i = 0; i < colNum; i++){
+            document.write("<tr>")
+            for(j = 1; j <= memberCol; j++){
+                if(seatNum != memberNum){
+                    seatNum = i * memberCol + j;
+                    document.write("<td>좌석" + seatNum + "</td>")
+                }
+                else
+                    break;
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

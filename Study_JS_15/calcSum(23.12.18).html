@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1부터 n까지 더하기</title>
+</head>
+<body>
+    <script>
+        function calcSum(n) { // 1부터 n까지 더하는 함수
+            let sum = 0;
+
+            for(let i = 1; i <= n; i++){
+                sum += i;
+            }
+            document.write("1부터 " + n + "까지 더하면 " + sum);
+        }
+
+        var num = prompt("얼마까지 더할까요?", "");
+        if(num != null)
+            calcSum(num);
+        else
+            alert("값을 입력하세요.");
+    </script>
+</body>
+</html>
