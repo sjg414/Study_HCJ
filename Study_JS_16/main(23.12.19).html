@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팝업 창 열기</title>
+</head>
+<body>
+  <p>문서를 열면 팝업 창이 표시됩니다.</p> 
+  <script>
+    openPopup();
+
+    function openPopup() {
+      var newPopup = window.open("doit-event(23.12.19).html", "popup", "width=750, height=600");
+
+      if(newPopup == null)
+        alert("팝업이 차단되어 있습니다. 팝업 차단을 해제해 주세요.")
+      else {
+        newPopup.opener = self; //newPopup 객체를 만든 부모가 자신이라고 알려줌
+        newPopup.moveBy(100,100);
+      }
+    }
+  </script>
+</body>
+</html>

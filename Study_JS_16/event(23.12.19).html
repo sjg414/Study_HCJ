@@ -1,0 +1,19 @@
+<!-- 23.12.19 당첨자 뽑기 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>당첨자 발표</title>
+    <link rel="stylesheet" href="css/event.css">
+    <script src="js/winner.js"></script>
+  </head>
+  <body>    
+    <h1>당첨자 발표</h1>
+    <p>전체 응모자 수 : <span id="num"></span></p>
+    <p>당첨자 : <span id="winnerPerson"></span></p>
+    <script> //winner.js의 winner함수 실행
+      var numPerson = parseInt(prompt("전체 응모자 수 : ", ""));
+      winner(numPerson)
+      </script> 
+  </body>
+</html>

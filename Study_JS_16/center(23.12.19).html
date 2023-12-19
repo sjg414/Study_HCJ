@@ -1,0 +1,22 @@
+<!-- 23.12.19 팝업창 center에 표시하기 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Window 객체</title>
+</head>
+<body>
+    <p>문서를 열면 팝업 창이 표시됩니다</p>
+    <script>
+      function openCenter(url, win, w, h) { //팝업창이 가운데에 열리도록 하는 함수
+        let left = (screen.availWidth - w) / 2; //팝업창 왼쪽 시작점(UI영역을 제외한 넓이 - 팝업창 넓이 / 2)
+        let top = (screen.availHeight - h) / 2; //팝업창 위쪽 시작점(UI영역을 제외한 높이 - 팝업창 높이 / 2)
+        var point = "left = " + left + ", top = " + top + ", width = " + w + ", height =" + h;
+        window.open(url, win, point);
+      }
+
+      openCenter("notice(23.12.19).html", "pop", 500, 400);     
+    </script>
+</body>
+</html> 
