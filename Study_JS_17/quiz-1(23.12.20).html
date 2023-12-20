@@ -1,0 +1,49 @@
+<!-- 23.12.20 요소 클릭시 css 변경 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 1</title>
+	<style>
+		ul{
+			list-style: none;
+		}
+		li {
+			font-size:20px; 
+			line-height: 35px;
+		}
+		.check {			
+			color:#ccc;
+			font-size:20px;
+			margin-right:25px;
+		}
+		.check:hover {
+			color:#222;
+		}
+	</style>
+</head>
+<body>
+	<h1>할 일 목록</h1>
+	<ul>
+		<li><span class="check">&check;</span>할 일 1 </li>
+		<li><span class="check">&check;</span>할 일 2 </li>
+		<li><span class="check">&check;</span>할 일 3 </li>
+		<li><span class="check">&check;</span>할 일 4 </li>
+		<li><span class="check">&check;</span>할 일 5 </li>
+	</ul>
+	<script>
+		var check = document.getElementsByClassName("check"); //check 요소 가져오기
+		var _list = document.querySelector("li"); //li 요소 가져오기
+
+		//check 요소 클릭 시, changeStyle 함수 실행
+		for(let i = 0; i < check.length; i++) {
+			check[i].addEventListener("click", changeStyle);
+		}
+		function changeStyle() { //check의 부모노드인 li 요소의 스타일 변경(회색, 가운데 취소선)
+			this.parentNode.style.color = "#ccc";
+			this.parentNode.style.textDecoration = "line-through";
+		}
+	</script>
+</body>
+</html>

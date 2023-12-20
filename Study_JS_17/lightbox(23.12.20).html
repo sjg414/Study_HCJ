@@ -1,0 +1,45 @@
+<!-- 23.12.20 라이트 박스 효과 만들기 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>라이트박스</title>
+    <link rel="stylesheet" href="css/lightbox.css">
+  </head>
+  <body>
+    <div class="row">
+      <ul>
+        <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+        <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+        <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li> 
+        <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+        <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+        <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>          
+      </ul>    
+    </div>
+    <div id="lightbox">
+			<img src="images/tree-1.jpg" alt="" id="lightboxImage">			
+    </div>
+    <script>
+      var pics = document.getElementsByClassName("pic");  //className이 pic인 요소 가져오기
+      var lightbox = document.getElementById("lightbox"); //lightbox 요소 가져오기
+      var lightboxImage = document.getElementById("lightboxImage"); //lightboxImage 요소 가져오기
+
+      //pics 요소 클릭 시, showLightbox 함수 실행
+      for(let i = 0; i < pics.length; i++){ 
+        pics[i].addEventListener("click", showLightbox);
+      }
+      //lightbox 클릭 시, 화면에서 감춤
+      lightbox.onclick = function() {
+        lightbox.style.display = "none";
+      }
+      //섬네일 이미지 클릭 시, 라이트박스에 이미지 보여주기
+      function showLightbox() {
+        var bigLocation = this.getAttribute("data-src"); //이미지 속성 가져오기
+        lightboxImage.setAttribute("src", bigLocation); //속성 set
+        lightbox.style.display = "block"; //화면 보여주기
+      }
+    </script>
+  </body>
+</html>

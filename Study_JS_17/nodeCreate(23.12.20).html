@@ -1,0 +1,36 @@
+<!-- 23.12.20 텍스트 필드에 입력한 값을 화면에 표시하기 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Programming</title>
+	<link rel="stylesheet" href="css/nodelist.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <button onclick="newRegister(); return false;">추가</button> <!--버튼 클릭시 newRegister 함수 실행-->
+    </form>
+    <hr>  
+    <ul id="itemList"></ul>  
+  </div>
+  <script>
+    function newRegister() { //텍스트 필드에 입력한 값 화면에 표시하는 함수
+      var newItem = document.createElement("li"); //li 요소 추가
+      var subject = document.querySelector("#subject"); //텍스트 필드 가져오기
+      var newText = document.createTextNode(subject.value); //텍스트 필드의 값 저장
+
+      newItem.appendChild(newText); //li요소 노드에 텍스트 필드 값을 자식 노드로 설정
+
+      var itemList = document.querySelector("#itemList"); //ul 요소 가져오기
+      itemList.appendChild(newItem);  //ul요소 노드의 자식 노드로 li노드 추가
+
+      subject.value=""; //텍스트 필드 값 초기화
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- 23.12.20 DOM을 이용한 테이블 작성 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+	<style>
+		input {
+			width: 20px;
+			font-size: 20px;
+			text-align: center;
+			margin: 10px;
+			color: red;
+		}
+		table {
+			width: 500px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		td {
+			border: 1px solid black;
+			text-align: center;
+			padding: 10px;
+		}
+		button {
+			width: 50px;
+			padding: 5px;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="row">행<input type="text" id="col">열 <!--행과 열 입력받기-->
+	<button onclick="createTable(); return false;">작성</button> <!--클릭 시 createTable 실행-->
+	<div id="showTable"></div>
+	<script>
+		function createTable() {
+			var newTable = document.createElement("table"); //테이블 노드 추가
+			var row = document.querySelector("#row").value; //행 값 가져오기
+			var col = document.querySelector("#col").value; //열 값 가져오기
+			var showTable = document.querySelector("#showTable"); //div 가져오기
+			
+
+			if(showTable.childNodes) { //div노드가 자식 노드가 있을 경우(테이블이 이미 있을 경우)
+				while (showTable.hasChildNodes()) {//자식 노드 삭제
+					showTable.removeChild(showTable.firstChild );       
+				}
+				showTable.innerHTML = ""; //내용 초기화
+			}
+
+			for(let i = 0; i < row; i++) {
+			var new_tr = document.createElement("tr"); //행 노드 만들기
+			for(let j = 0; j < col; j++) {
+				var new_td = document.createElement("td"); //열 노드 만들기
+				var new_text = document.createTextNode(i + ", " + j); //텍스트 노드 만들기
+				new_td.appendChild(new_text); //열 노드의 자식으로 텍스트 노드 추가
+				new_tr.appendChild(new_td); //행 노드의 자식으로 열 노드 추가
+			}
+			newTable.appendChild(new_tr); //테이블 노드 자식으로 행 노드 추가
+			}
+			showTable.appendChild(newTable); //div 노드 자식으로 테이블 노드 추가
+		}
+	</script>
+</body>
+</html>
