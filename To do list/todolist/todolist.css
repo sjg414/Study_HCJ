@@ -1,0 +1,33 @@
+#textInput {
+  height: 40px;
+  width: 300px;
+  font-size: 20px;
+}
+
+#buttonInput {
+  height: 45px;
+  width: 45px;
+  font-size: 20px;
+}
+
+.tableClass {
+  margin-top: 20px;
+}
+.tdClass {
+  border: 1px solid gray;
+  height: 40px;
+  width: 300px;
+  font-size: 20px;
+}
+
+.labelClass {
+}
+
+#deleteButton {
+  height: 40px;
+  width: 45px;
+  float: right;
+  background: ligth-gray;
+  border: none;
+  font-size: 20px;
+}

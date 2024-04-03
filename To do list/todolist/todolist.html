@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todolist.css" />
+    <title>todolist</title>
+  </head>
+  <body>
+    <h1>TODO List</h1>
+    <div id="inputDiv">
+      <!--입력 Div-->
+      <input id="textInput" type="text" placeholder="리스트 입력하시오." />
+      <input id="buttonInput" type="button" value="+" onclick="addList()" />
+    </div>
+    <div id="listDiv">
+      <!--list Div-->
+      <table id="tableNode" class="tableClass">
+        <tbody id="tbodyNode">
+          <tr>
+            <td class="tdClass">
+              <input type="checkbox" name="checkboxList" value="HTML" />
+              <label class="labelClass">HTML</label>
+              <input type="button" id="deleteButton" value="삭제" />
+            </td>
+          </tr>
+          <tr>
+            <td class="tdClass">
+              <input type="checkbox" name="checkboxList" value="CSS" />
+              <label class="labelClass">CSS</label>
+              <input type="button" id="deleteButton" value="삭제" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="todolist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+ul {
+  /* list-style: none; */
+}
+li {
+  font-size: 20px;
+  line-height: 35px;
+}
+.check {
+  color: #ccc;
+  font-size: 20px;
+  margin-right: 25px;
+}
+.check:hover {
+  color: #222;
+}
