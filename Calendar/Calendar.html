@@ -4,14 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendar</title>
+    <link rel="stylesheet" href="./Calendar.css" />
   </head>
   <body>
     <section>
       <h1>Calendar</h1>
       <div class="calendarDiv">
-        <table class="calendarTable"></table>
+        <table class="calendarTable">
+          <thead class="theadStyle">
+            <tr>
+              <th>
+                <button onclick="preMonth();">pre</button>
+              </th>
+              <th id="thMonth" colspan="5"></th>
+              <th>
+                <button onclick="nextMonth()">next</button>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="tbodyClass">
+            <tr class="dateClass">
+              <td class="tdClass">일</td>
+              <td class="tdClass">월</td>
+              <td class="tdClass">화</td>
+              <td class="tdClass">수</td>
+              <td class="tdClass">목</td>
+              <td class="tdClass">금</td>
+              <td class="tdClass">토</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
     <script src="Calendar.js"></script>
+    <script src="previousMonth.js"></script>
+    <script src="nextMonth.js"></script>
   </body>
 </html>
