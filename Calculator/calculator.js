@@ -20,9 +20,9 @@ function clearClick() {
 
 //= 클릭 시 사칙연산 결과 출력
 function resultClick() {
-  const regex = /[0-9]/g; //문자 찾기
+  const regex = /[^-*/+]/g; //operator 제외 한 숫자(정수, 실수)
   var operator = textDisplay.value.replace(regex, ""); //operator 찾기
-  var numArr = textDisplay.value.match(/\d+/g); //숫자 찾기
+  var numArr = textDisplay.value.split(operator); //숫자 찾기
 
   switch (operator) {
     case "+":
