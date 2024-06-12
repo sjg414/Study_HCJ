@@ -9,10 +9,17 @@
     <section>
       <div>
         <div>
-          <div>문제 영역</div>
-          <div>답안 영역</div>
+          <div class="questionArea"><li id="questionText"></li></div>
+          <div class="answerArea">
+            <ol id="answerText">
+              <li id="answer" value="1" onclick="answerClick(this.value)"></li>
+              <li id="answer" value="2" onclick="answerClick(this.value)"></li>
+              <li id="answer" value="3" onclick="answerClick(this.value)"></li>
+              <li id="answer" value="4" onclick="answerClick(this.value)"></li>
+            </ul></div>
         </div>
       </div>
     </section>
+    <script src="quiz.js"></script>
   </body>
 </html>
