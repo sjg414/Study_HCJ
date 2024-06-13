@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css"/>
+    <title>Quiz Program</title>
   </head>
   <body>
     <section>
-      <div>
-        <div>
-          <div class="questionArea"><li id="questionText"></li></div>
+        <div class="quizArea">
+          <div class="questionArea"><h1 id="questionText"></h1></div>
           <div class="answerArea">
             <ol id="answerText">
               <li id="answer" value="1" onclick="answerClick(this.value)"></li>
@@ -18,7 +18,10 @@
               <li id="answer" value="4" onclick="answerClick(this.value)"></li>
             </ul></div>
         </div>
-      </div>
+        <div class="buttonDiv">
+          <button onclick="preButton()">이전</button>
+          <button onclick="nextButton()">다음</button>
+        </div>
     </section>
     <script src="quiz.js"></script>
   </body>
