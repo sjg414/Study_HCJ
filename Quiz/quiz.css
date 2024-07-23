@@ -1,0 +1,48 @@
+section {
+  width: 100%;
+  height: 50%;
+}
+
+table {
+  margin: 5% auto;
+  border: 1px solid black;
+}
+.quizArea {
+  width: 30%;
+  height: 40%;
+  margin: 5% auto;
+  border: 4px double black;
+  background-color: rgb(250, 250, 250);
+}
+
+.questionArea {
+  border-bottom: 4px dotted blue;
+}
+
+#questionText {
+  padding: 10px 30px;
+  background-color: lightskyblue;
+  border-radius: 25px;
+}
+
+#answer {
+  padding: 15px;
+  margin: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonDiv button {
+  border-radius: 25px;
+  background-color: lightpink;
+  margin: -70px 50px;
+  width: 100px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
